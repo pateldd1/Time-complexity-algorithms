@@ -1,0 +1,11 @@
+def factors(num)
+  arr = []
+  start = Math.sqrt(num).to_i
+  start.downto(1) do |fac|
+    if num%fac == 0
+      arr.unshift(fac)
+      arr.push(num/fac) unless num/fac == fac
+    end
+  end
+  arr
+end
